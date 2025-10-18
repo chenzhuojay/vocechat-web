@@ -90,10 +90,10 @@
     "yet-another-react-lightbox": "^3.25.0"
   },
   "scripts": {
-    "start": "REACT_APP_BUILD_TIME=$(date +%s) node scripts/start.js",
-    "build": "rm -rf build && REACT_APP_BUILD_TIME=$(date +%s) GENERATE_SOURCEMAP=false node scripts/build.js",
-    "build:release": "rm -rf build && REACT_APP_BUILD_TIME=$(date +%s) REACT_APP_RELEASE=true GENERATE_SOURCEMAP=false node scripts/build.js",
-    "deploy:demo": "REACT_APP_OFFICIAL_DEMO=true pnpm build && gh-pages -d build",
+    "start": "set REACT_APP_BUILD_TIME=%time:~0,2%%time:~3,2%%time:~6,2% && node scripts/start.js",
+    "build": "rd /s /q build 2>nul || mkdir build 2>nul && set REACT_APP_BUILD_TIME=%time:~0,2%%time:~3,2%%time:~6,2% && set GENERATE_SOURCEMAP=false && node scripts/build.js",
+    "build:release": "rd /s /q build 2>nul || mkdir build 2>nul && set REACT_APP_BUILD_TIME=%time:~0,2%%time:~3,2%%time:~6,2% && set REACT_APP_RELEASE=true && set GENERATE_SOURCEMAP=false && node scripts/build.js",
+    "deploy:demo": "set REACT_APP_OFFICIAL_DEMO=true && pnpm build && gh-pages -d build",
     "push:demo": "gh-pages -d build"
   },
   "browserslist": {

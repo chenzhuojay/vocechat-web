@@ -12,14 +12,16 @@ const prices: Price[] = [
   },
 ];
 const official_dev = `https://dev.voce.chat`;
-const local_dev = `http://localhost:3333`;
-// const local_dev = `https://dev.voce.chat`;
-const dev_origin = process.env.REACT_APP_OFFICIAL_DEMO ? official_dev : local_dev;
+const local_dev = `http://localhost:3000`; // 使用正确的后端端口
 
-// const local_dev = `https://im.ttt.td`;
-export const BASE_ORIGIN = process.env.REACT_APP_RELEASE ? `${location.origin}` : dev_origin;
-export const IS_OFFICIAL_DEMO = BASE_ORIGIN === official_dev;
+// 强制使用本地开发服务器地址，不受环境变量影响
+const dev_origin = local_dev;
 
+// 直接设置BASE_ORIGIN，不使用环境变量判断
+export const BASE_ORIGIN = dev_origin;
+export const IS_OFFICIAL_DEMO = false;
+
+// 构建API基础URL
 const BASE_URL = `${BASE_ORIGIN}/api`;
 export const getLicensePriceList = () => {
   const ps = prices.map((p, idx) => {

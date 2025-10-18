@@ -44,56 +44,56 @@ const navs = [
   {
     name: "config",
     items: [
-      {
-        name: "bot",
-        component: <BotConfig />,
-        admin: true,
-      },
-      {
-        name: "firebase",
-        component: <ConfigFirebase />,
-      },
-      {
-        name: "agora",
-        component: <ConfigAgora />,
-      },
-      {
-        name: "smtp",
-        component: <ConfigSMTP />,
-      },
-      {
-        name: "login_method",
-        component: <Logins />,
-      },
-      {
-        name: "third_app",
-        component: <APIConfig />,
-      },
-      {
-        name: "widget",
-        component: <Widget />,
-      },
-      {
-        name: "license",
-        component: <License />,
-      },
+      // {
+      //   name: "bot",
+      //   component: <BotConfig />,
+      //   admin: true,
+      // },
+      // {
+      //   name: "firebase",
+      //   component: <ConfigFirebase />,
+      // },
+      // {
+      //   name: "agora",
+      //   component: <ConfigAgora />,
+      // },
+      // {
+      //   name: "smtp",
+      //   component: <ConfigSMTP />,
+      // },
+      // {
+      //   name: "login_method",
+      //   component: <Logins />,
+      // },
+      // {
+      //   name: "third_app",
+      //   component: <APIConfig />,
+      // },
+      // {
+      //   name: "widget",
+      //   component: <Widget />,
+      // },
+      // {
+      //   name: "license",
+      //   component: <License />,
+      // },
     ],
     admin: true,
   },
-  {
-    name: "about",
-    items: [
-      {
-        name: "api_doc",
-        component: <APIDocument />,
-        admin: true,
-      },
-      {
-        name: "version",
-        component: <Version />,
-      },
-    ],
-  },
+  // {
+  //   name: "about",
+  //   items: [
+  //     {
+  //       name: "api_doc",
+  //       component: <APIDocument />,
+  //       admin: true,
+  //     },
+  //     {
+  //       name: "version",
+  //       component: <Version />,
+  //     },
+  //   ],
+  // },
 ];
 
 const useNavs = () => {
