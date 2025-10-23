@@ -16,8 +16,7 @@ const InviteInMobile = () => {
   const [inviteLink, setInviteLink] = useState("");
   const { copy, copied } = useCopy();
   useEffect(() => {
-    if (inviteLink) {
-      //!isMobile() &&改成手机也直接跳转注册
+    if (!isMobile() && inviteLink) {
       location.href = inviteLink;
     }
   }, [inviteLink]);
