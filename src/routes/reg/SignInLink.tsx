@@ -10,7 +10,7 @@ export default function SignInLink({ token }: { token?: string }) {
   const ctx = searchParams.get("ctx") ?? "app";
   useEffect(() => {
     // 移动端访问，则跳转
-    if (isMobile() && !!token && ctx == "app") {
+    if (isMobile() && !!token && ctx == "app" && false) { //去掉移动端跳转
       location.href = `https://join.voce.chat/download?link=${encodeURIComponent(
         `${location.origin}?magic_token=${token}`
       )}`;

@@ -1,7 +1,7 @@
 {
   "name": "vocechat-web",
   "version": "0.9.20",
-  "homepage": "https://voce.chat",
+  "homepage": "http://47.112.30.248:3009",
   "dependencies": {
     "@metamask/onboarding": "^1.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.1",

@@ -62,18 +62,10 @@ const InviteLink: FC<Props> = ({ context = "members", cid }) => {
     <>
       <div className="flex flex-col items-start pb-8">
         {context == "members" && (
-          <p className="font-semibold text-sm mb-2 text-gray-500 dark:text-gray-50 flex flex-col md:flex-row gap-4">
-            {t("share_invite_link")}
-            <a
-              className="text-primary-500 flex gap-1 items-center"
-              href="http://doc.voce.chat/faq#fe_url"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconQuestion /> {t("invite_link_faq")}
-            </a>
-          </p>
-        )}
+              <p className="font-semibold text-sm mb-2 text-gray-500 dark:text-gray-50">
+                {t("share_invite_link")}
+              </p>
+            )}
         <div className="w-full md:w-[512px] mb-3 relative">
           <Input readOnly className={"large !pr-16"} placeholder="Generating" value={link} />
           <Button
