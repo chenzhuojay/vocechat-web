@@ -16,7 +16,8 @@ const InviteInMobile = () => {
   const [inviteLink, setInviteLink] = useState("");
   const { copy, copied } = useCopy();
   useEffect(() => {
-    if (!isMobile() && inviteLink) {
+    if (inviteLink) {
+      //!isMobile() &&改成手机也直接跳转注册
       location.href = inviteLink;
     }
   }, [inviteLink]);
@@ -41,12 +42,12 @@ const InviteInMobile = () => {
         </span>
       </div>
 
-      <p className="text-md text-gray-600 my-5">
+      {/* <p className="text-md text-gray-600 my-5">
         {t("have_already")}
         <a href={app_link} className="text-primary-500 px-2">
           {t("open")}
         </a>
-      </p>
+      </p> */}
       <div className="flex flex-col items-center mb-12">
         {webLink && (
           <a href={webLink} className="p-2 mt-2 rounded bg-primary-500 text-white">
